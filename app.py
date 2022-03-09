@@ -1,26 +1,7 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 from flask import Flask
-
-
-# In[2]:
-
-
 app = Flask(__name__)
 
-
-# In[3]:
-
-
 from flask import request, render_template
-
-
-# In[5]:
-
 
 from textblob import TextBlob
 
@@ -33,12 +14,6 @@ def index():
         return(render_template("index.html", result = r))
     else:
         return(render_template("index.html", result = "2"))
-        
-
-
-# In[ ]:
-
 
 if __name__ == "__main__":
     app.run()
-
